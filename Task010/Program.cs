@@ -5,7 +5,7 @@ Console.Write("Введите трехзначное число ");
 int num = Convert.ToInt32(Console.ReadLine());
 while (num < 100 || num > 999)
 {
-    Console.Write("Введено не трехзначное число. Введите трехзначное число ");
+    Console.Write("Ошибка. Введено не трехзначное число. Повторите ввод ");
     num = Convert.ToInt32(Console.ReadLine());
 }
 int Second(int n)
@@ -14,4 +14,4 @@ int Second(int n)
     return second;
 }
 int sec = Second(num);
-Console.WriteLine($"Вторая цифра введенного вами числа {sec}");
+Console.WriteLine($"Вторая цифра числа {sec}");
