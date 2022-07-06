@@ -1,28 +1,28 @@
-﻿//Пограмма, которая задаёт массив из 8 элементов и выводит их на экран.
+﻿// Программа, которая задаёт массив из 8 элементов, заполненный псевдослучайными числами и выводит их на экран.
+// 1, 2, 5, 7, 19, 6, 1, 33 -> [1, 2, 5, 7, 19, 6, 1, 33]
 
-int[] FillArray()
+
+int[] ArrayRandom(int size)
 {
-    Console.Write("Введите количество элементов массива: ");
-    int elementcount = Convert.ToInt32(Console.ReadLine());
-    int[] array = new int[elementcount];
+    int[] array = new int[8];
+    int index = 0;
+    Random rnd = new Random();
 
-    for (int i = 0; i < array.Length; i++)
+    while (index < array.Length)
     {
-        Console.Write($"Введите элемент массива под индексом {i}: ");
-        array[i] = Convert.ToInt32(Console.ReadLine());
+        array[index] = rnd.Next(0, 33);
+        index++;
     }
     return array;
 }
-
-void PrintArray(int[] array)
+void PrintArray(int[] arr)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < arr.Length; i++)
     {
-        if (i == 0) System.Console.Write("[");
-        if (i < array.Length - 1) Console.Write(array[i] + ",");
-        else System.Console.Write(array[i] + "]");
+            if (i == 0) Console.Write("[");
+            if (i <  arr.Length - 1) Console.Write(arr[i] + ",");
+            else Console.Write(arr[i] + "]");
     }
 }
-
-int[] array = FillArray();
-PrintArray(array);
+int[] resArray = ArrayRandom(8);
+PrintArray(resArray);
