@@ -1,7 +1,5 @@
-﻿//Задача 36: Задайте одномерный массив, заполненный случайными числами.
-//Найдите сумму элементов, стоящих на нечётных позициях.
-//[3, 7, 23, 12] -> 19
-//[-4, -6, 89, 6] -> 0
+﻿//Одномерный массив, заполненный случайными числами.
+//Нахождение суммы элементов, стоящих на нечётных позициях.
 
 int[] CreatArray(int size, int begin, int end)
 {
@@ -14,7 +12,7 @@ int[] CreatArray(int size, int begin, int end)
     return array;
 }
 
-void PrintArray(int[] array) //печатает массив
+void PrintArray(int[] array) 
 {
     for (int i = 0; i < array.Length; i++)
     {
@@ -38,13 +36,13 @@ int SumOddElement(int[] array)
 Console.WriteLine("Программа считает сумму элементов стоящих на нечетных позициях в массиве");
 Console.Write("Задайте длинну массива: ");
 int size = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Задайте нужный диапазон чисел.");
+Console.WriteLine("Задайте требуемый диапазон чисел.");
 Console.Write("Нижняя граница диапазона: ");
 int begin = Convert.ToInt32(Console.ReadLine());
 Console.Write("Верхняя граница диапазона: ");
 int end = Convert.ToInt32(Console.ReadLine());
 
-int[] array = CreatArray(size, begin, end);//задаем массив
-PrintArray(array);//печатаем заданный массив
-System.Console.Write(" -> ");//печатаем разделитель
-System.Console.Write(SumOddElement(array));//печатаем ответ
+int[] array = CreatArray(size, begin, end);
+PrintArray(array);
+System.Console.Write(" -> ");
+System.Console.Write(SumOddElement(array));
